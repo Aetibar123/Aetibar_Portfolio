@@ -5,6 +5,9 @@ const ServiceCard = ({ Title, discription }: any) => {
     return (
 
         <Card variant='outlined'
+        data-aos="zoom-out"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
+          data-aos-duration="1800"
             sx={{
                 // --- KEY CHANGES FOR SIZE CONTROL ---
 

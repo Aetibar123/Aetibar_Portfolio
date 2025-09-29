@@ -53,27 +53,35 @@ export default function Home() {
   return (
     <>
 
-      <Box sx={{
+      <Box  sx={{
         flexGrow: 1,
         p: { xs: 2, md: 3 }, // Responsive padding
         minHeight: "100vh",
         width: "100%",
-        bgcolor: "#8500e4ff",
+        background: " linear-gradient(90deg,rgba(133, 0, 228, 1) 0%, rgba(248, 210, 255, 1) 100%)",
+        // bgcolor: "#8500e4ff",
+       
         display: 'flex',       // Added for vertical centering
         alignItems: 'center', // Added for vertical centering
+        
       }}>
-        <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
+        <Grid container spacing={{ xs: 2, md: 4 }}      // <-- YEH ATTRIBUTE ADD KIYA HAI
+                 alignItems="center">
 
           {/* ===== Left Column (Text Content) ===== */}
           <Grid size={{ xs: 12, md: 6 }} sx={{
             textAlign: { xs: 'center', md: 'left' }, // Center text on mobile, left on desktop
             order: { xs: 2, md: 1 } // On mobile, show text below image
-          }}>
+          }}
+           data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <Typography variant="h3" color="white" sx={{
               mb: 3,
               fontWeight: 'bold',
               fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" }
-            }}>
+
+            }}
+              data-aos="fade-up"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+              data-aos-delay="200" >
               The Future of IT Services, Built Today.
             </Typography>
 
@@ -92,6 +100,8 @@ export default function Home() {
                   fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
                   mb: 1.5,
                 }}
+                data-aos="fade-up"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+                data-aos-delay="200"
               >
                 • {text} {/* Used a bullet point for better list styling */}
               </Typography>
@@ -104,10 +114,11 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             order: { xs: 1, md: 2 } // On mobile, show image on top
-          }}>
+          }}data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
             <Box sx={{
               p: 2, // Padding inside the purple container
-              bgcolor: '#b44bffff',
+              // bgcolor: '#b44bffff',
+              bgcolor: '#dcabff28',
               borderRadius: { xs: '30px', md: '60px' }, // Responsive border radius
               width: '100%', // Takes full width of its column
               maxWidth: '550px', // Prevents it from getting too large on big screens
@@ -137,46 +148,49 @@ export default function Home() {
 
       <Box
         sx={{
-          minHeight: "60vh", // minHeight use karein taaki content badhne par height adjust ho sake
-          width: '100%', // 100vw ki jagah 100% better hai horizontal scrollbar avoid karne ke liye
+          minHeight: "60vh",
+          width: '100%',
           bgcolor: '#f8d2ffff',
           textAlign: 'center',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: { xs: 2, md: 3 }, // Mobile aur desktop ke liye alag gap
-          p: { xs: 2, sm: 3 }, // Responsive padding taaki content edges se na chipke
+          gap: { xs: 2, md: 3 },
+          p: { xs: 2, sm: 3 },
+          overflow: 'hidden', // Best practice to avoid scrollbars during animation
         }}
       >
+        {/* Heading par 'fade-up' animation lagaya */}
         <Typography
           variant="h3"
           color="#47007aff"
           sx={{
             fontWeight: 'bold',
-            // Responsive font size
             fontSize: { xs: '1.6rem', sm: '2.2rem', md: '2.75rem' },
           }}
+          data-aos="zoom-in"       // <-- YEH ATTRIBUTE ADD KIYA HAI
+
         >
           We Are Udaipur's No #1 On Clutch and GoodFirms
         </Typography>
 
+        {/* Paragraph par 'fade-up' animation with a slight delay */}
         <Typography
           variant="h6"
           color="#5b009cff"
           sx={{
-            // Fixed width hata kar responsive width lagayi hai
             width: { xs: '95%', sm: '80%', md: '70%' },
-            // Ek max-width set ki hai taaki badi screens par text zyada na faile
             maxWidth: '800px',
-            // Responsive font size
             fontSize: { xs: '0.9rem', sm: '1rem' }
           }}
+          data-aos="zoom-out"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200"  // <-- Thoda delay taaki heading ke baad aaye (200ms)
+
         >
           Our goal is to help our clients succeed by providing them with innovative, high-performance digital solutions. We specialize in a comprehensive suite of services that includes web development, cloud computing, IoT, AR/VR, and blockchain. By harnessing the potential of AI, machine learning, and predictive analytics, we build solutions that not only address current needs but also drive future growth.
         </Typography>
       </Box>
-
 
 
 
@@ -186,7 +200,8 @@ export default function Home() {
         minHeight: "100vh",
         height: "auto", // height ko auto rakhein
         width: '100%', // 100vw ki jagah 100% use karein
-        bgcolor: 'rgba(181, 79, 255, 1)',
+        // bgcolor: 'rgba(181, 79, 255, 1)',
+        background: 'linear-gradient(0deg,rgba(248, 210, 255, 1) 0%, rgba(133, 0, 228, 1) 100%)',
         textAlign: 'center',
         p: { xs: 2, md: 4 }, // Responsive padding for the whole section
         display: 'flex',
@@ -198,7 +213,8 @@ export default function Home() {
           fontWeight: 'bold',
           mb: { xs: 3, md: 5 }, // Margin bottom for spacing
           fontSize: { xs: '2.5rem', md: '3.5rem' } // Responsive font size
-        }}>
+        }}
+        data-aos="zoom-in">
           Our Services
         </Typography>
 
@@ -224,7 +240,7 @@ export default function Home() {
             variant={'contained'} sx={{
               padding: { xs: '12px 24px', md: '15px 30px' }, // Responsive padding
               borderRadius: "60px",
-              bgcolor: '#9104f5ff',
+              bgcolor: '#c779ff93',
               fontSize: { xs: '0.9rem', md: '1rem' }, // Responsive font size for button
               '&:hover': {
                 bgcolor: "rgba(145, 4, 245, 0.8)" // Slightly adjusted hover color
@@ -254,10 +270,13 @@ export default function Home() {
         <Typography
           variant="h3"
           color="#47007aff"
+          data-aos="zoom-in"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+         
           sx={{
             fontWeight: 'bold',
             // Responsive font size for the heading
             fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.75rem' },
+            
           }}
         >
           Ready to Turn Your Ideas Into Reality?
@@ -266,6 +285,8 @@ export default function Home() {
         <Typography
           variant="h6"
           color="#5b009cff"
+          data-aos="zoom-out"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
           sx={{
             // Removed fixed width, replaced with responsive width and a max-width
             width: { xs: '95%', sm: '80%', md: '70%' },
@@ -284,18 +305,21 @@ export default function Home() {
         minHeight: "100vh",
         height: "auto",
         width: '100%', // Use 100% instead of 100vw
-        bgcolor: '#8500e4ff',
+        // bgcolor: '#8500e4ff',
+        //  background:" linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(133, 0, 228, 1) 35%, rgba(248, 210, 255, 1) 100%)",
+        background: "linear-gradient(0deg,rgba(133, 0, 228, 1) 0%, rgba(248, 210, 255, 1) 100%)",
         textAlign: 'center',
         display: 'flex', // Added display flex
         flexDirection: 'column',
         justifyContent: 'center',
+        overflow:'hidden',
         p: { xs: 2, md: 4 }, // Added responsive padding
       }}>
-        <Typography variant="h3" color="white" sx={{
+        <Typography variant="h3" color="#47007aff" sx={{
           fontWeight: 'bold',
           fontSize: { xs: '2rem', md: '3rem' },
           mb: { xs: 3, md: 5 } // Margin bottom for spacing
-        }}>
+        }} data-aos="zoom-out">
           Our Projects
         </Typography>
 
@@ -351,6 +375,8 @@ export default function Home() {
         <Typography
           variant="h3"
           color="#47007aff"
+          data-aos="zoom-in"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          
           sx={{
             fontWeight: 'bold',
             // Responsive font size for the heading
@@ -363,6 +389,8 @@ export default function Home() {
         <Typography
           variant="h6"
           color="#5b009cff"
+          data-aos="zoom-out"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
           sx={{
             // Removed fixed width, replaced with responsive width and a max-width
             width: { xs: '95%', sm: '80%', md: '70%' },
@@ -381,10 +409,11 @@ export default function Home() {
       <Box sx={{
         // Replaced 'height' with 'minHeight' for more flexibility
         minHeight: "70vh",
-        overflow:'hidden',
+        overflow: 'hidden',
         // Changed '100vw' to '100%' to prevent horizontal scrollbars
         width: '100%',
-        bgcolor: 'rgba(181, 79, 255, 1)',
+        // bgcolor: 'rgba(181, 79, 255, 1)',
+        background:" radial-gradient(circle,rgba(133, 0, 228, 1) 0%, rgba(248, 210, 255, 1) 100%)",
         textAlign: 'center',
         // Added display: 'flex' to vertically center the content
         display: 'flex',
@@ -397,7 +426,7 @@ export default function Home() {
           fontWeight: 'bold',
           mb: 4, // Added margin-bottom for spacing
           fontSize: { xs: '2rem', md: '3rem' } // Made font size responsive
-        }}>
+        }} data-aos="fade-right">
           Client Testimonials
         </Typography>
 
@@ -426,6 +455,8 @@ export default function Home() {
         <Typography
           variant="h3"
           color="#47007aff"
+          data-aos="zoom-in"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+         
           sx={{
             fontWeight: 'bold',
             // Responsive font size for the heading
@@ -438,6 +469,8 @@ export default function Home() {
         <Typography
           variant="h6"
           color="#5b009cff"
+          data-aos="zoom-out"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
           sx={{
             // Removed fixed width, replaced with responsive width and a max-width
             width: { xs: '95%', sm: '80%', md: '70%' },
@@ -454,35 +487,67 @@ export default function Home() {
 
 
       <Box sx={{
-      // 'height' ko 'minHeight' se replace kiya taaki content badhne par section grow kar sake
-      minHeight: "100vh",
-      height: "auto", // Height ko auto rakhein
-      
-      // '100vw' ko '100%' se replace kiya taaki horizontal scrollbar na aaye
-      width: '100%',
-      
-      bgcolor: '#8500e4ff',
-      textAlign: 'center',
-      flexDirection: 'column',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      
-      // Responsive padding add ki hai
-      py: { xs: 4, md: 6 } // py = padding top & bottom
-    }}>
-      <Typography variant="h3" color="#ffffffff" sx={{
-        fontWeight: 'bold',
-        mb: { xs: 3, md: 5 }, // Title ke neeche spacing ke liye margin-bottom
-        // Font size ko responsive banaya hai
-        fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
-      }}>
-        Aetibar Team
-      </Typography>
-      
-      {/* Yeh sabse zaroori hai ki aapka <About /> component bhi responsive ho */}
-      <About />
+        // 'height' ko 'minHeight' se replace kiya taaki content badhne par section grow kar sake
+        minHeight: "100vh",
+        height: "auto", // Height ko auto rakhein
 
+        // '100vw' ko '100%' se replace kiya taaki horizontal scrollbar na aaye
+        width: '100%',
+
+        bgcolor: '#8500e4ff',
+        textAlign: 'center',
+        flexDirection: 'column',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+        // Responsive padding add ki hai
+        py: { xs: 4, md: 6 } // py = padding top & bottom
+      }}>
+        <Typography variant="h3" color="#ffffffff"  data-aos="zoom-out"  data-aos-delay="200"     sx={{
+          fontWeight: 'bold',
+          mb: { xs: 3, md: 5 }, // Title ke neeche spacing ke liye margin-bottom
+          // Font size ko responsive banaya hai
+          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
+        }}>
+          Aetibar Team
+        </Typography>
+
+        {/* Yeh sabse zaroori hai ki aapka <About /> component bhi responsive ho */}
+        <About />
+
+      </Box>
+
+     
+        <Box
+      sx={{
+        background: 'linear-gradient(0deg, rgba(248, 210, 255, 1) 0%, rgba(133, 0, 228, 1) 100%)',
+        // Added properties for better layout and to prevent overflow
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '60vh', // Taaki section ko thodi height mile
+        overflow: 'hidden', // Extra content ko hide karne ke liye
+        p: 2, // Thodi padding taaki text edges se na chipke
+      }}
+    >
+      <Typography
+        data-aos="zoom-in-up"
+        sx={{
+          width: '100%',
+          textAlign: 'center',
+          fontWeight: 'bold',
+          background: 'linear-gradient(0deg, rgba(133, 0, 228, 1) 0%, rgba(248, 210, 255, 1) 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          
+          // --- YEH HAI RESPONSIVE FONT SIZE KA JAADU ---
+          fontSize: 'clamp(4rem, 20vw, 23rem)',
+          lineHeight: 1, // Line height ko adjust kiya taaki extra space na le
+        }}
+      >
+        Aetibar
+      </Typography>
     </Box>
 
     </>
@@ -491,3 +556,7 @@ export default function Home() {
 
 
 
+
+
+// F8D2FFFF
+// 8500E4FF

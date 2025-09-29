@@ -23,7 +23,9 @@ const ProjectCard = ({ imageUrl, Title, Discription }: any) => {
         boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.1)',
         transform: 'translateY(-5px)',
       },
-    }}>
+    }} data-aos="zoom-in"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+      data-aos-delay="200"
+      data-aos-duration="1800">
       {/* Use CardMedia for the image for better structure */}
       <CardMedia
         component="img"
@@ -31,6 +33,7 @@ const ProjectCard = ({ imageUrl, Title, Discription }: any) => {
 
           height: '200px', // Give a fixed height to the image area
           objectFit: 'fill',
+          p:1,
           borderTopLeftRadius: { xs: '60px', md: '60px' },
           borderTopRightRadius: { xs: '60px', md: '60px' },
         }}

@@ -52,26 +52,27 @@ const TestimonialTicker = () => {
             minHeight: '250px',
             borderRadius: '30px',
             p: { xs: 2, md: 3 },
-            bgcolor: 'rgba(248, 210, 255, 0.9)',
+            bgcolor: 'rgba(248, 210, 255, 0.71)',
             backdropFilter: 'blur(5px)',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center'
+            justifyContent: 'center',
+           
           }}>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Avatar alt={testimonial.name} src={testimonial.avatar} sx={{ width: 60, height: 60 }} />
                 <Box sx={{ ml: 2, textAlign: 'left' }}>
-                  <Typography variant="h6" color="#47007aff" component="div" sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  <Typography variant="h6" color="#ffffffff" component="div" sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
                     {testimonial.name}
                   </Typography>
-                  <Typography variant="body2" color="#5b009cff">
+                  <Typography variant="body2" color="#ffffffff">
                     {testimonial.company}
                   </Typography>
                 </Box>
               </Box>
               {/* Removed fixed height and width from the message */}
-              <Typography variant="body1" color="#5b009cff" sx={{
+              <Typography variant="body1" color="#ffffffff" sx={{
                 fontStyle: 'italic',
                 textAlign: 'left',
                 fontSize: { xs: '0.9rem', md: '1rem' }

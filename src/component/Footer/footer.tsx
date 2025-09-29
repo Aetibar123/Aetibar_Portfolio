@@ -11,13 +11,16 @@ const Footer = () => {
   return (
     <Box
       component="footer"
+      overflow={'hidden'}
       sx={{
         bgcolor: '#f8d2ffff',
         p: { xs: 4, sm: 6 },
         width: '100%',
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg"  data-aos="fade-up"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
+          data-aos-duration="1800">
         <Box
           sx={{
             display: 'flex',
