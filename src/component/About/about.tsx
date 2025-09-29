@@ -37,39 +37,6 @@ const About = () => {
         }
     ]
     return (
-        // <Box sx={{
-
-        //     height: '90%',
-        //     width: "90%",
-        //     display: 'flex',
-        //     gap: 5,
-        //     justifyContent: 'center',
-        //     textAlign: 'center',
-        //     alignItems: 'center'
-        // }}>
-
-        //     {AboutContent.map((value, index) => (
-        //         <Box key={index}>
-        //             <Card sx={{
-        //                 height: '80vh',
-        //                 width: '25vw',
-        //                 borderRadius: '60px',
-        //                 bgcolor: '#f8d2ffff',
-
-        //             }}>
-        //                 <CardContent>
-        //                     <Image height={200} width={200} alt='image' style={{ borderRadius: '100%' }} src={value.imgUrl || ""} />
-        //                     <Typography variant='h4' p={2} color="#47007aff">{value.name}</Typography>
-        //                     <Typography variant='h6' p={1} color="#47007aff">{value.position}</Typography>
-        //                     <Typography variant='body1' color="#5b009cff">{value.role}</Typography>
-        //                     <Typography variant='body1' color="#5b009cff">{value.email}</Typography>
-        //                 </CardContent>
-        //             </Card>
-        //         </Box>
-        //     ))}
-
-
-        // </Box>
 
           <Box sx={{
       width: "90%",
@@ -90,7 +57,11 @@ const About = () => {
             display: 'flex',
           }}
         >
-          <Card sx={{
+          <Card 
+           data-aos="zoom-in"      // <-- YEH ATTRIBUTE ADD KIYA HAI
+          data-aos-delay="200" 
+          data-aos-duration="1800"
+          sx={{
             // Removed fixed vh/vw units
             width: '100%',
             height: 'auto', // Height now adapts to content
