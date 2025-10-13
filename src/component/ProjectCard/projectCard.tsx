@@ -1,7 +1,13 @@
-import { Box, Card, CardContent, Typography, CardActions, Button, CardMedia } from '@mui/material'
-import Image from "next/image"
+import {Card, CardContent, Typography, CardMedia } from '@mui/material'
 
-const ProjectCard = ({ imageUrl, Title, Discription }: any) => {
+interface ProjectCardProps {
+  imageUrl: string;      // URL of the project image
+  Title: string;         // Project title
+  Discription: string;   // Project description (you might want to fix typo: "Description")
+}
+
+
+const ProjectCard: React.FC<ProjectCardProps>  = ({ imageUrl, Title, Discription }) => {
 
   return (
 
@@ -58,19 +64,7 @@ const ProjectCard = ({ imageUrl, Title, Discription }: any) => {
         </Typography>
       </CardContent>
 
-      <CardActions sx={{ justifyContent: 'center', pb: { xs: 2, md: 3 } }}>
-        <Button variant={'contained'}
-          sx={{
-            padding: { xs: '8px 24px', md: '10px 30px' }, // Responsive padding
-            borderRadius: "60px",
-            bgcolor: '#8500e4ff',
-            '&:hover': {
-              bgcolor: "rgba(181, 79, 255, 1)"
-            }
-          }}>
-          Explore
-        </Button>
-      </CardActions>
+      
     </Card>
   )
 }

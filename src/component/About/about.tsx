@@ -1,4 +1,4 @@
-import { Card, CardContent, CardActions, Typography, Box, Button } from '@mui/material'
+import { Card, CardContent,  Typography, Box, } from '@mui/material'
 import Image from 'next/image'
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
             role: "FullStack Developer",
             position: 'Chief Executive Officer',
             email: 'sayyedamaanali164@gmail.com',
-            imgUrl: "/temp.jpg"
+            imgUrl: "/Amaan.jpg"
 
         },
         {
@@ -26,15 +26,9 @@ const About = () => {
             role: "FullStack Developer & Designer",
             position: 'Chief Strategy Officer',
             email: 'aaqibdm2@gmail.com',
-            imgUrl: "/temp.jpg"
+            imgUrl: "/Aaqib.jpg"
         },
-        {
-            name: "Preeti Verma",
-            role: "FullStack Developer",
-            position: 'Sr. Software Engineer',
-            email: 'sayyedamaanali164@gmail.com',
-            imgUrl: "/temp.jpg"
-        }
+       
     ]
     return (
 

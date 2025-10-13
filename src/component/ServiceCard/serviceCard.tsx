@@ -1,6 +1,12 @@
-import { Card, CardContent, Typography, CardActions, Button, Box } from '@mui/material'
+import { Card, CardContent, Typography } from '@mui/material'
 
-const ServiceCard = ({ Title, discription }: any) => {
+interface ServiceCardProps {
+  Title: string;
+  description: string;  // fixed typo from "discription"
+}
+
+
+const ServiceCard: React.FC<ServiceCardProps>  = ({ Title, description }) => {
 
     return (
 
@@ -53,11 +59,11 @@ const ServiceCard = ({ Title, discription }: any) => {
                 <Typography variant='body1' color="#5b009cff" sx={{
                     fontSize: { xs: '0.9rem', md: '1rem' }
                 }}>
-                    {discription}
+                    {description}
                 </Typography>
             </CardContent>
 
-            <CardActions sx={{ justifyContent: 'center', pb: { xs: 2, md: 3 } }}>
+            {/* <CardActions sx={{ justifyContent: 'center', pb: { xs: 2, md: 3 } }}>
                 <Button variant={'contained'}
                     sx={{
                         padding: { xs: '8px 24px', md: '10px 30px' },
@@ -71,7 +77,7 @@ const ServiceCard = ({ Title, discription }: any) => {
                     }}>
                     Explore
                 </Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
     )
 }

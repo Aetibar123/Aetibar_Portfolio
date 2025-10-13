@@ -77,7 +77,7 @@ const TestimonialTicker = () => {
                 textAlign: 'left',
                 fontSize: { xs: '0.9rem', md: '1rem' }
               }}>
-                "{testimonial.message}"
+                {testimonial.message}
               </Typography>
             </CardContent>
           </Card>
