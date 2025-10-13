@@ -6,7 +6,7 @@ import {
   Toolbar,
   Box,
   Typography,
-  Link as MUILink,
+  
   IconButton,
   Drawer,
   Container,
@@ -26,7 +26,7 @@ const Header = () => {
   const styles = {
     color: "#47007aff",
     textDecoration: "none",
-    fontSize: { md: '1.1rem' },
+    fontSize:'1rem',
     "&:hover": {
       color: "#8500e4ff",
     },
@@ -74,8 +74,8 @@ const Header = () => {
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
               {menuItems.map((item, i) => (
 
-                <ScrollLink to={item.href} style={styles} onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
-                  onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
+                <ScrollLink to={item.href} style={styles} onMouseEnter={(e) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
+                  onMouseLeave={(e) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
                   {item.text}
                 </ScrollLink>
 
@@ -105,8 +105,8 @@ const Header = () => {
       >
         {menuItems.map((item, i) => (
 
-          <ScrollLink to={item.href} style={styles} onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
-            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
+          <ScrollLink to={item.href} style={styles} onMouseEnter={(e) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
+            onMouseLeave={(e) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
             {item.text}
           </ScrollLink>
         ))}

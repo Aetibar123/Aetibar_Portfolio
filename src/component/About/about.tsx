@@ -1,4 +1,4 @@
-import { Card, CardContent, CardActions, Typography, Box, Button } from '@mui/material'
+import { Card, CardContent,  Typography, Box, } from '@mui/material'
 import Image from 'next/image'
 
 const About = () => {

@@ -29,24 +29,24 @@ export default function Home() {
 
   const ProjectContent = {
     p1: {
-      imageUrl: "/temp.jpg",
+      imageUrl: "/Ecommerse.png",
       Title: "Ecommerce website",
-      Discription: "We ensure your digital products are flawless by providing comprehensive Quality Assurance services. From manual to automated testing, we identify and resolve issues to guarantee your software is reliable, secure, and performs perfectly before it reaches your users.",
+      Discription: "We built a modern and scalable e-commerce platform designed to deliver a seamless shopping experience. From product browsing to secure checkout, the system ensures smooth performance and reliability. It includes real-time inventory management, user authentication, order tracking, and integrated payment gateways — all optimized for both desktop and mobile users.",
     },
     p2: {
-      imageUrl: "/temp.jpg",
-      Title: "Ecommerce website",
-      Discription: "We ensure your digital products are flawless by providing comprehensive Quality Assurance services. From manual to automated testing, we identify and resolve issues to guarantee your software is reliable, secure, and performs perfectly before it reaches your users.",
+      imageUrl: "/institute.jpeg",
+      Title: "Institute Management System",
+      Discription: "We developed a complete institute management platform to streamline academic and administrative operations. The system manages student enrollment, course scheduling, attendance, examinations, and staff records efficiently. With secure access controls, real-time updates, and an intuitive dashboard, it ensures smooth communication between students, teachers, and administrators.",
     },
     p3: {
-      imageUrl: "/temp.jpg",
-      Title: "Ecommerce website",
-      Discription: "We ensure your digital products are flawless by providing comprehensive Quality Assurance services. From manual to automated testing, we identify and resolve issues to guarantee your software is reliable, secure, and performs perfectly before it reaches your users.",
+      imageUrl: "/food.jpeg",
+      Title: "Food Delivery App",
+      Discription: "We created a user-friendly food delivery platform that connects customers with nearby restaurants for quick and convenient ordering. The app features real-time order tracking, secure payments, menu browsing, and delivery partner management. With a responsive interface and efficient backend, it ensures a smooth and reliable experience for users, restaurants, and delivery agents alike.",
     },
     p4: {
-      imageUrl: "/temp.jpg",
-      Title: "Ecommerce website",
-      Discription: "We ensure your digital products are flawless by providing comprehensive Quality Assurance services. From manual to automated testing, we identify and resolve issues to guarantee your software is reliable, secure, and performs perfectly before it reaches your users.",
+      imageUrl: "/social.jpeg",
+      Title: "Social Media Application",
+      Discription: "We built an interactive social media platform that enables users to connect, share posts, and engage in real-time conversations. The system supports user authentication, media uploads, comments, likes, and notifications for seamless interaction. With a scalable backend and modern UI, it delivers a fast, secure, and engaging social experience across devices.",
     },
 
   }
@@ -234,7 +234,7 @@ export default function Home() {
           }}>
             {Object.entries(CardContent).map(([key, value]) => (
               // IMPORTANT: Make sure your ServiceCard component is also responsive
-              <ServiceCard Title={key} discription={value} key={key} />
+              <ServiceCard Title={key} description={value} key={key} />
             ))}
           </Box>
 
