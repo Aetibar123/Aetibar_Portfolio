@@ -39,15 +39,7 @@ const Footer = () => {
             </Typography>
           </Box>
 
-          {/* === Links Section === */}
-          <Box sx={{ width: { xs: '45%', sm: '20%', md: '15%' } }}>
-            <Typography variant="h6" color="#47007aff" gutterBottom sx={{ fontWeight: 'bold' }}>
-              Links
-            </Typography>
-            <Link component={NextLink} href="/about" color="#5b009cff" display="block" sx={{ mb: 1, '&:hover': { textDecoration: 'underline' } }}>About</Link>
-            <Link component={NextLink} href="/contact" color="#5b009cff" display="block" sx={{ mb: 1, '&:hover': { textDecoration: 'underline' } }}>Contact</Link>
-            <Link component={NextLink} href="/privacy-policy" color="#5b009cff" display="block" sx={{ '&:hover': { textDecoration: 'underline' } }}>Privacy</Link>
-          </Box>
+         
 
           {/* === Follow Us Section === */}
           <Box sx={{ width: { xs: '45%', sm: '20%', md: '15%' } }}>

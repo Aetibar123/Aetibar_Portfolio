@@ -13,7 +13,8 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,7 @@ const Header = () => {
     setOpen(state);
   };
 
-  const styles: any = {
+  const styles = {
     color: "#47007aff",
     textDecoration: "none",
     fontSize: { md: '1.1rem' },
@@ -32,12 +33,11 @@ const Header = () => {
   };
 
   const menuItems = [
-    { text: "Home", href: "/" },
-    { text: "Services", href: "/services" },
-    { text: "Projects", href: "/projects" },
-    { text: "Testimonials", href: "/testimonials" },
-    { text: "About Us", href: "/about" },
-    { text: "Contact", href: "/contact" },
+    { text: "Home", href: "home" },
+    { text: "Services", href: "services" },
+    { text: "Projects", href: "projects" },
+    { text: "Testimonials", href: "testimonials" },
+    { text: "About Us", href: "about" },
   ];
 
   return (
@@ -71,18 +71,15 @@ const Header = () => {
             </Box>
 
             {/* Desktop Menu */}
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2}}>
+            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
               {menuItems.map((item, i) => (
-          <MUILink
-            key={i}
-            variant="h6"
-            sx={styles}
-            component={Link}
-            href={item.href}
-          >
-            {item.text}
-          </MUILink>
-        ))}
+
+                <ScrollLink to={item.href} style={styles} onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
+                  onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
+                  {item.text}
+                </ScrollLink>
+
+              ))}
             </Box>
 
             {/* Hamburger Icon */}
@@ -104,18 +101,14 @@ const Header = () => {
         anchor="right"
         open={open}
         onClose={toggleDrawer(false)}
-        slotProps={{ paper: { sx: { width: 240, bgcolor: "#fadeffff", textAlign:'start', gap:2, p:3} } }}
+        slotProps={{ paper: { sx: { width: 240, bgcolor: "#fadeffff", textAlign: 'start', gap: 2, p: 3 } } }}
       >
         {menuItems.map((item, i) => (
-          <MUILink
-            key={i}
-            variant="h6"
-            sx={styles}
-            component={Link}
-            href={item.href}
-          >
+
+          <ScrollLink to={item.href} style={styles} onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
+            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => ( (e.currentTarget as HTMLElement).style.color = "#47007aff")} key={i} smooth={true} duration={600} offset={-70}>
             {item.text}
-          </MUILink>
+          </ScrollLink>
         ))}
       </Drawer>
 
