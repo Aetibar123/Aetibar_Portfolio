@@ -44,12 +44,13 @@ const Header = () => {
 
 
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: "#fadeffff" }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: "#fadeffff",width:'100vw', left:0}}>
         {/* ===== YEH CONTAINER ADD KAREIN ===== */}
-        <Container maxWidth="xl">
+        <Container maxWidth={false} sx={{ px: { xs: 2, md: 0 }}}>
           <Toolbar
             disableGutters // Yeh zaroori hai taaki extra padding na aaye
             sx={{
+             
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
@@ -71,7 +72,7 @@ const Header = () => {
             </Box>
 
             {/* Desktop Menu */}
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2,m:2 }}>
               {menuItems.map((item, i) => (
 
                 <ScrollLink to={item.href} style={styles} onMouseEnter={(e) => ( (e.currentTarget as HTMLElement).style.color = "#8500e4ff")}
