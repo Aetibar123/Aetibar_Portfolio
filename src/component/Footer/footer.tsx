@@ -10,6 +10,7 @@ import NextLink from 'next/link';
 const Footer = () => {
   return (
     <Box
+    border={'2px solid red'}
       component="footer"
       overflow={'hidden'}
       sx={{

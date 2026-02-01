@@ -57,7 +57,7 @@ const TestimonialTicker = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-           
+            
           }}>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
