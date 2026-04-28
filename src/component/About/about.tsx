@@ -18,7 +18,7 @@ const About = () => {
             role: "FullStack Developer",
             position: 'Chief Executive Officer',
             email: 'sayyedamaanali164@gmail.com',
-            imgUrl: "/Amaan.jpg"
+            imgUrl: "/user.png"
 
         },
         {
@@ -27,6 +27,13 @@ const About = () => {
             position: 'Chief Strategy Officer',
             email: 'aaqibdm2@gmail.com',
             imgUrl: "/Aaqib.jpg"
+        },
+        {
+            name: "Hasrat Khan",
+            role: "Digital Marketar & Designer",
+            position: 'Chief Strategy Officer',
+            email: 'aaqibdm2@gmail.com',
+            imgUrl: "/user.png"
         },
        
     ]
@@ -73,8 +80,8 @@ const About = () => {
             }}>
               {/* Image size is now fixed but reasonable */}
               <Image
-                height={150}
-                width={150}
+                height={140}
+                width={140}
                 alt='image'
                 style={{ borderRadius: '50%' }} // 50% for a perfect circle
                 src={value.imgUrl || ""}

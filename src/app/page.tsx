@@ -153,7 +153,6 @@ export default function Home() {
 
       <Box
         sx={{
-           border:'2px solid red',
           minHeight: "60vh",
           width: '100%',
           bgcolor: '#f8d2ffff',
@@ -186,7 +185,7 @@ export default function Home() {
           variant="h6"
           color="#5b009cff"
           sx={{
-            border:'2px solid red',
+          
             width: { xs: '95%', sm: '80%', md: '70%' },
             maxWidth: '800px',
             fontSize: { xs: '0.9rem', sm: '1rem' }
@@ -205,7 +204,6 @@ export default function Home() {
 
 
         <Box sx={{
-           border:'2px solid red',
           // height ko minHeight se replace karein taaki content ke hisab se grow kar sake
           minHeight: "100vh",
           height: "auto", // height ko auto rakhein
@@ -232,7 +230,7 @@ export default function Home() {
           <Box sx={{
             width: '100%',
             display: 'flex',
-            border:'2px solid red',
+           
             flexWrap: "wrap",
             gap: { xs: 3, md: 4 }, // Responsive gap
             justifyContent: 'center',
@@ -265,7 +263,7 @@ export default function Home() {
 
       <Box
         sx={{
-           border:'2px solid red',
+           
           minHeight: "60vh", // Use minHeight to allow content to grow
           height: 'auto',
           width: '100%', // Use 100% instead of 100vw to avoid scrollbars
@@ -315,7 +313,7 @@ export default function Home() {
       <Box sx={{
         // Replaced fixed height with minHeight
         minHeight: "100vh",
-         border:'2px solid red',
+        
         height: "auto",
         width: '100%', // Use 100% instead of 100vw
         // bgcolor: '#8500e4ff',
@@ -372,7 +370,7 @@ export default function Home() {
 
       <Box
         sx={{
-           border:'2px solid red',
+           
           minHeight: "60vh", // Use minHeight to allow content to grow
           height: 'auto',
           width: '100%', // Use 100% instead of 100vw to avoid scrollbars
@@ -422,7 +420,7 @@ export default function Home() {
 
  <section id="testimonials">
       <Box sx={{
-         border:'2px solid red',
+        
         // Replaced 'height' with 'minHeight' for more flexibility
         minHeight: "70vh",
         overflow: 'hidden',
@@ -454,7 +452,7 @@ export default function Home() {
 
       <Box
         sx={{
-           border:'2px solid red',
+           
           minHeight: "60vh", // Use minHeight to allow content to grow
           height: 'auto',
           width: '100%', // Use 100% instead of 100vw to avoid scrollbars
@@ -511,7 +509,7 @@ export default function Home() {
 
         // '100vw' ko '100%' se replace kiya taaki horizontal scrollbar na aaye
         width: '100%',
- border:'2px solid red',
+
         bgcolor: '#8500e4ff',
         textAlign: 'center',
         flexDirection: 'column',
@@ -569,7 +567,7 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          border:'2px solid red',
+         
           minHeight: '60vh', // Taaki section ko thodi height mile
           overflow: 'hidden', // Extra content ko hide karne ke liye
           p: 2, // Thodi padding taaki text edges se na chipke
@@ -578,7 +576,7 @@ export default function Home() {
         <Typography
           data-aos="zoom-in-up"
           sx={{
-             border:'2px solid red',
+            
             width: '100%',
             textAlign: 'center',
             fontWeight: 'bold',

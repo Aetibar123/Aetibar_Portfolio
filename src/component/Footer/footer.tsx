@@ -5,12 +5,13 @@ import React from 'react';
 import { Box, Container, Typography, Link, IconButton } from '@mui/material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import NextLink from 'next/link';
 
 const Footer = () => {
   return (
     <Box
-    border={'2px solid red'}
+   
       component="footer"
       overflow={'hidden'}
       sx={{
@@ -51,8 +52,11 @@ const Footer = () => {
               <IconButton aria-label="Twitter" component="a" href="https://x.com/Aetibar_" sx={{ color: '#5b009cff', '&:hover': { color: '#47007aff' } }}>
                 <TwitterIcon />
               </IconButton>
-              <IconButton aria-label="Instagram" component="a" href="https://www.instagram.com/aetibar786" sx={{ color: '#5b009cff', '&:hover': { color: '#47007aff' } }}>
+              <IconButton aria-label="Instagram" component="a" href="https://www.instagram.com/p/DXraaRjkww5/" sx={{ color: '#5b009cff', '&:hover': { color: '#47007aff' } }}>
                 <InstagramIcon />
+              </IconButton>
+              <IconButton aria-label="Instagram" component="a" href="https://www.linkedin.com/in/aetibar-information-and-technologies-502531406/" sx={{ color: '#5b009cff', '&:hover': { color: '#47007aff' } }}>
+              <LinkedInIcon/>
               </IconButton>
             </Box>
           </Box>
